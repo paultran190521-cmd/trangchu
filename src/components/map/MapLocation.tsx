@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface MapLocationProps {
+  key?: React.Key;
   id: string;
   title: string;
   description: string;

@@ -64,8 +64,6 @@ export function MapDashboard() {
         <p className="m-0 text-[0.7rem] md:text-xs opacity-80 uppercase tracking-wider text-mind-light drop-shadow">Bản đồ hành trình tương tác</p>
       </div>
 
-      <MandalaBackground />
-
       {/* Abstract Animated Path Background */}
       <div className="absolute inset-0 pointer-events-none opacity-40 z-0">
         <svg className="w-full h-full" viewBox="0 0 1000 700" preserveAspectRatio="none">

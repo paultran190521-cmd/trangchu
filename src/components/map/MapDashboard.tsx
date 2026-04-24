@@ -5,6 +5,8 @@ import { LighthouseBooks } from './details/LighthouseBooks';
 import { TempleTest } from './details/TempleTest';
 import { SpringBreathing } from './details/SpringBreathing';
 import { LibraryCards } from './details/LibraryCards';
+import { MandalaBackground } from './MandalaBackground';
+import { LighthouseIcon, TempleIcon, SpringIcon, LibraryIcon } from './Icons';
 
 export type LocationId = 'lighthouse' | 'temple' | 'spring' | 'library' | null;
 
@@ -16,36 +18,36 @@ export function MapDashboard() {
       id: 'lighthouse',
       title: 'Hải Đăng Tri Thức',
       description: 'Soi rọi con đường qua trang sách & video',
-      imageUrl: 'https://images.unsplash.com/photo-1510255375376-b63adcdcbb5a?q=80&w=400&h=400&auto=format&fit=crop',
+      icon: <LighthouseIcon />,
       position: { top: '25%', left: '25%' },
-      colorClass: 'border-mind-amber/60 shadow-[0_0_40px_rgba(223,147,23,0.5)]',
+      colorClass: 'bg-mind-base/80',
       glowClass: 'bg-mind-amber',
     },
     {
       id: 'temple',
       title: 'Ngôi Đền Thấu Hiểu',
       description: 'Mã hóa nội tâm qua bài trắc nghiệm tâm lý',
-      imageUrl: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=400&h=400&auto=format&fit=crop',
+      icon: <TempleIcon />,
       position: { top: '20%', left: '70%' },
-      colorClass: 'border-mind-cyan/60 shadow-[0_0_30px_rgba(25,146,176,0.3)]',
+      colorClass: 'bg-[#0a323a]/90',
       glowClass: 'bg-mind-cyan',
     },
     {
       id: 'spring',
       title: 'Suối Nguồn Tỉnh Thức',
       description: 'Lắng nghe hơi thở, khơi nguồn bình an',
-      imageUrl: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=400&h=400&auto=format&fit=crop',
+      icon: <SpringIcon />,
       position: { top: '65%', left: '25%' },
-      colorClass: 'border-mind-cyan shadow-[0_0_30px_rgba(25,146,176,0.5)] animate-breathe',
+      colorClass: 'bg-mind-base/80',
       glowClass: 'bg-mind-cyan',
     },
     {
       id: 'library',
       title: 'Thư Viện Khoa Học',
       description: 'Hệ thống thẻ bài tri thức cốt lõi',
-      imageUrl: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=400&h=400&auto=format&fit=crop',
+      icon: <LibraryIcon />,
       position: { top: '60%', left: '70%' },
-      colorClass: 'border-white/40 shadow-[0_0_30px_rgba(255,255,255,0.2)]',
+      colorClass: 'bg-white/10',
       glowClass: 'bg-white',
     }
   ];
@@ -62,15 +64,7 @@ export function MapDashboard() {
         <p className="m-0 text-[0.7rem] md:text-xs opacity-80 uppercase tracking-wider text-mind-light drop-shadow">Bản đồ hành trình tương tác</p>
       </div>
 
-      {/* Deep Mandala Background Layer */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat mix-blend-color-dodge opacity-40"
-        style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1610287103859-994c979d460e?q=80&w=1600&auto=format&fit=crop')",
-          maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%)',
-          WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%)'
-        }}
-      ></div>
+      <MandalaBackground />
 
       {/* Abstract Animated Path Background */}
       <div className="absolute inset-0 pointer-events-none opacity-40 z-0">
